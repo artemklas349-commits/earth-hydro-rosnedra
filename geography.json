@@ -1,0 +1,750 @@
+{
+  "notice": "Иллюстративные маркеры зон работ; не координаты месторождений, скважин или объектов. Количество точек не равно числу проектов.",
+  "regions": [
+    {
+      "id": "khmao",
+      "name": "ХМАО — Югра",
+      "center": [
+        61.1,
+        70.6
+      ],
+      "illustrative_markers": 21,
+      "description": "Публичная география работ"
+    },
+    {
+      "id": "yanao",
+      "name": "ЯНАО",
+      "center": [
+        67.1,
+        75.0
+      ],
+      "illustrative_markers": 19,
+      "description": "Публичная география работ"
+    },
+    {
+      "id": "tyumen_region",
+      "name": "Тюменская область",
+      "center": [
+        56.4,
+        68.0
+      ],
+      "illustrative_markers": 10,
+      "description": "Публичная география работ"
+    },
+    {
+      "id": "zabaikal",
+      "name": "Забайкальский край",
+      "center": [
+        52.5,
+        115.6
+      ],
+      "illustrative_markers": 15,
+      "description": "Районы Читы, Тунгокоченского и Газимуро-Заводского направлений"
+    },
+    {
+      "id": "amur",
+      "name": "Амурская область",
+      "center": [
+        53.9,
+        127.0
+      ],
+      "illustrative_markers": 9,
+      "description": "Район Зеи и территория области"
+    },
+    {
+      "id": "khabarovsk",
+      "name": "Хабаровский край",
+      "center": [
+        51.5,
+        136.0
+      ],
+      "illustrative_markers": 12,
+      "description": "Территория Хабаровского края"
+    },
+    {
+      "id": "chukotka",
+      "name": "Чукотский АО",
+      "center": [
+        66.6,
+        173.0
+      ],
+      "illustrative_markers": 12,
+      "description": "Публичная география работ"
+    },
+    {
+      "id": "irkutsk",
+      "name": "Иркутская область",
+      "center": [
+        53.3,
+        105.5
+      ],
+      "illustrative_markers": 9,
+      "description": "Публичная география работ"
+    },
+    {
+      "id": "magadan",
+      "name": "Магаданская область",
+      "center": [
+        61.2,
+        150.0
+      ],
+      "illustrative_markers": 7,
+      "description": "Публичная география работ"
+    },
+    {
+      "id": "buryatia",
+      "name": "Бурятия",
+      "center": [
+        52.5,
+        108.5
+      ],
+      "illustrative_markers": 6,
+      "description": "Публичная география работ"
+    },
+    {
+      "id": "kyrgyz",
+      "name": "Киргизия",
+      "center": [
+        42.6,
+        74.5
+      ],
+      "illustrative_markers": 4,
+      "description": "Публичная география работ"
+    }
+  ],
+  "markers": [
+    {
+      "region": "khmao",
+      "lat": 63.398,
+      "lon": 70.44
+    },
+    {
+      "region": "khmao",
+      "lat": 61.429,
+      "lon": 67.166
+    },
+    {
+      "region": "khmao",
+      "lat": 60.541,
+      "lon": 67.702
+    },
+    {
+      "region": "khmao",
+      "lat": 62.413,
+      "lon": 68.796
+    },
+    {
+      "region": "khmao",
+      "lat": 61.74,
+      "lon": 69.664
+    },
+    {
+      "region": "khmao",
+      "lat": 61.612,
+      "lon": 67.031
+    },
+    {
+      "region": "khmao",
+      "lat": 60.109,
+      "lon": 72.586
+    },
+    {
+      "region": "khmao",
+      "lat": 58.604,
+      "lon": 72.621
+    },
+    {
+      "region": "khmao",
+      "lat": 61.713,
+      "lon": 73.964
+    },
+    {
+      "region": "khmao",
+      "lat": 58.327,
+      "lon": 72.02
+    },
+    {
+      "region": "khmao",
+      "lat": 60.803,
+      "lon": 80.627
+    },
+    {
+      "region": "khmao",
+      "lat": 62.651,
+      "lon": 71.002
+    },
+    {
+      "region": "khmao",
+      "lat": 61.574,
+      "lon": 71.905
+    },
+    {
+      "region": "khmao",
+      "lat": 61.164,
+      "lon": 72.389
+    },
+    {
+      "region": "khmao",
+      "lat": 63.716,
+      "lon": 62.955
+    },
+    {
+      "region": "khmao",
+      "lat": 61.806,
+      "lon": 69.868
+    },
+    {
+      "region": "khmao",
+      "lat": 62.907,
+      "lon": 69.281
+    },
+    {
+      "region": "khmao",
+      "lat": 60.053,
+      "lon": 69.852
+    },
+    {
+      "region": "khmao",
+      "lat": 62.026,
+      "lon": 64.831
+    },
+    {
+      "region": "khmao",
+      "lat": 63.281,
+      "lon": 67.471
+    },
+    {
+      "region": "khmao",
+      "lat": 61.214,
+      "lon": 65.223
+    },
+    {
+      "region": "yanao",
+      "lat": 66.763,
+      "lon": 71.113
+    },
+    {
+      "region": "yanao",
+      "lat": 62.075,
+      "lon": 79.084
+    },
+    {
+      "region": "yanao",
+      "lat": 64.126,
+      "lon": 70.381
+    },
+    {
+      "region": "yanao",
+      "lat": 65.533,
+      "lon": 70.719
+    },
+    {
+      "region": "yanao",
+      "lat": 66.542,
+      "lon": 78.301
+    },
+    {
+      "region": "yanao",
+      "lat": 64.589,
+      "lon": 73.34
+    },
+    {
+      "region": "yanao",
+      "lat": 65.18,
+      "lon": 70.112
+    },
+    {
+      "region": "yanao",
+      "lat": 67.474,
+      "lon": 82.909
+    },
+    {
+      "region": "yanao",
+      "lat": 67.819,
+      "lon": 78.688
+    },
+    {
+      "region": "yanao",
+      "lat": 69.442,
+      "lon": 71.599
+    },
+    {
+      "region": "yanao",
+      "lat": 66.905,
+      "lon": 75.933
+    },
+    {
+      "region": "yanao",
+      "lat": 66.525,
+      "lon": 78.492
+    },
+    {
+      "region": "yanao",
+      "lat": 67.298,
+      "lon": 76.181
+    },
+    {
+      "region": "yanao",
+      "lat": 69.058,
+      "lon": 63.752
+    },
+    {
+      "region": "yanao",
+      "lat": 71,
+      "lon": 70.509
+    },
+    {
+      "region": "yanao",
+      "lat": 69.669,
+      "lon": 72.463
+    },
+    {
+      "region": "yanao",
+      "lat": 67.735,
+      "lon": 69.617
+    },
+    {
+      "region": "yanao",
+      "lat": 66.784,
+      "lon": 74.643
+    },
+    {
+      "region": "yanao",
+      "lat": 66.968,
+      "lon": 71.069
+    },
+    {
+      "region": "tyumen_region",
+      "lat": 56.731,
+      "lon": 69.073
+    },
+    {
+      "region": "tyumen_region",
+      "lat": 57.612,
+      "lon": 68.082
+    },
+    {
+      "region": "tyumen_region",
+      "lat": 56.418,
+      "lon": 68.192
+    },
+    {
+      "region": "tyumen_region",
+      "lat": 56.06,
+      "lon": 69.433
+    },
+    {
+      "region": "tyumen_region",
+      "lat": 56.525,
+      "lon": 70.61
+    },
+    {
+      "region": "tyumen_region",
+      "lat": 56.036,
+      "lon": 68.587
+    },
+    {
+      "region": "tyumen_region",
+      "lat": 55.587,
+      "lon": 68.278
+    },
+    {
+      "region": "tyumen_region",
+      "lat": 58.047,
+      "lon": 66.884
+    },
+    {
+      "region": "tyumen_region",
+      "lat": 55.708,
+      "lon": 65.748
+    },
+    {
+      "region": "tyumen_region",
+      "lat": 56.625,
+      "lon": 66.89
+    },
+    {
+      "region": "zabaikal",
+      "lat": 52.137,
+      "lon": 112.641
+    },
+    {
+      "region": "zabaikal",
+      "lat": 52.96,
+      "lon": 112.1
+    },
+    {
+      "region": "zabaikal",
+      "lat": 53.047,
+      "lon": 114.813
+    },
+    {
+      "region": "zabaikal",
+      "lat": 52.109,
+      "lon": 112.172
+    },
+    {
+      "region": "zabaikal",
+      "lat": 52.621,
+      "lon": 114.927
+    },
+    {
+      "region": "zabaikal",
+      "lat": 52.35,
+      "lon": 112.607
+    },
+    {
+      "region": "zabaikal",
+      "lat": 54.321,
+      "lon": 116.547
+    },
+    {
+      "region": "zabaikal",
+      "lat": 53.111,
+      "lon": 113.649
+    },
+    {
+      "region": "zabaikal",
+      "lat": 52.65,
+      "lon": 114.8
+    },
+    {
+      "region": "zabaikal",
+      "lat": 53.026,
+      "lon": 113.181
+    },
+    {
+      "region": "zabaikal",
+      "lat": 52.318,
+      "lon": 117.407
+    },
+    {
+      "region": "zabaikal",
+      "lat": 49.858,
+      "lon": 118.579
+    },
+    {
+      "region": "zabaikal",
+      "lat": 53.013,
+      "lon": 118.325
+    },
+    {
+      "region": "zabaikal",
+      "lat": 52.448,
+      "lon": 119.358
+    },
+    {
+      "region": "zabaikal",
+      "lat": 53.337,
+      "lon": 116.342
+    },
+    {
+      "region": "amur",
+      "lat": 53.322,
+      "lon": 126.86
+    },
+    {
+      "region": "amur",
+      "lat": 53.367,
+      "lon": 126.098
+    },
+    {
+      "region": "amur",
+      "lat": 54.25,
+      "lon": 127.279
+    },
+    {
+      "region": "amur",
+      "lat": 53.343,
+      "lon": 127.328
+    },
+    {
+      "region": "amur",
+      "lat": 53.146,
+      "lon": 127.02
+    },
+    {
+      "region": "amur",
+      "lat": 53.184,
+      "lon": 126.727
+    },
+    {
+      "region": "amur",
+      "lat": 53.678,
+      "lon": 124.607
+    },
+    {
+      "region": "amur",
+      "lat": 53.257,
+      "lon": 127.394
+    },
+    {
+      "region": "amur",
+      "lat": 53.209,
+      "lon": 127.507
+    },
+    {
+      "region": "khabarovsk",
+      "lat": 50.662,
+      "lon": 134.711
+    },
+    {
+      "region": "khabarovsk",
+      "lat": 46.693,
+      "lon": 135.456
+    },
+    {
+      "region": "khabarovsk",
+      "lat": 47.423,
+      "lon": 133.773
+    },
+    {
+      "region": "khabarovsk",
+      "lat": 48.7,
+      "lon": 136.359
+    },
+    {
+      "region": "khabarovsk",
+      "lat": 48.135,
+      "lon": 137.42
+    },
+    {
+      "region": "khabarovsk",
+      "lat": 49.872,
+      "lon": 137.104
+    },
+    {
+      "region": "khabarovsk",
+      "lat": 50.249,
+      "lon": 139.468
+    },
+    {
+      "region": "khabarovsk",
+      "lat": 52.154,
+      "lon": 136.475
+    },
+    {
+      "region": "khabarovsk",
+      "lat": 54.83,
+      "lon": 137.146
+    },
+    {
+      "region": "khabarovsk",
+      "lat": 57.055,
+      "lon": 135.27
+    },
+    {
+      "region": "khabarovsk",
+      "lat": 57.504,
+      "lon": 137.267
+    },
+    {
+      "region": "khabarovsk",
+      "lat": 55.925,
+      "lon": 136.042
+    },
+    {
+      "region": "chukotka",
+      "lat": 66.466,
+      "lon": 173.591
+    },
+    {
+      "region": "chukotka",
+      "lat": 68.627,
+      "lon": 172.994
+    },
+    {
+      "region": "chukotka",
+      "lat": 66.701,
+      "lon": 169.816
+    },
+    {
+      "region": "chukotka",
+      "lat": 67.897,
+      "lon": 174.774
+    },
+    {
+      "region": "chukotka",
+      "lat": 68.347,
+      "lon": 175.035
+    },
+    {
+      "region": "chukotka",
+      "lat": 65.542,
+      "lon": 175.225
+    },
+    {
+      "region": "chukotka",
+      "lat": 65.683,
+      "lon": 171.434
+    },
+    {
+      "region": "chukotka",
+      "lat": 67.989,
+      "lon": 175.266
+    },
+    {
+      "region": "chukotka",
+      "lat": 65.754,
+      "lon": 173.194
+    },
+    {
+      "region": "chukotka",
+      "lat": 65.971,
+      "lon": 171.024
+    },
+    {
+      "region": "chukotka",
+      "lat": 65.904,
+      "lon": 171.974
+    },
+    {
+      "region": "chukotka",
+      "lat": 67.564,
+      "lon": 169.563
+    },
+    {
+      "region": "irkutsk",
+      "lat": 53.409,
+      "lon": 103.154
+    },
+    {
+      "region": "irkutsk",
+      "lat": 52.93,
+      "lon": 104.265
+    },
+    {
+      "region": "irkutsk",
+      "lat": 53.779,
+      "lon": 106.977
+    },
+    {
+      "region": "irkutsk",
+      "lat": 53.899,
+      "lon": 106.938
+    },
+    {
+      "region": "irkutsk",
+      "lat": 52.154,
+      "lon": 105.062
+    },
+    {
+      "region": "irkutsk",
+      "lat": 52.481,
+      "lon": 106.083
+    },
+    {
+      "region": "irkutsk",
+      "lat": 53.021,
+      "lon": 107.531
+    },
+    {
+      "region": "irkutsk",
+      "lat": 52.578,
+      "lon": 105.096
+    },
+    {
+      "region": "irkutsk",
+      "lat": 52.92,
+      "lon": 108.043
+    },
+    {
+      "region": "magadan",
+      "lat": 61.715,
+      "lon": 150.051
+    },
+    {
+      "region": "magadan",
+      "lat": 58.9,
+      "lon": 152.378
+    },
+    {
+      "region": "magadan",
+      "lat": 61.634,
+      "lon": 153.125
+    },
+    {
+      "region": "magadan",
+      "lat": 59.958,
+      "lon": 150.102
+    },
+    {
+      "region": "magadan",
+      "lat": 61.956,
+      "lon": 150.912
+    },
+    {
+      "region": "magadan",
+      "lat": 59.932,
+      "lon": 151.555
+    },
+    {
+      "region": "magadan",
+      "lat": 61.735,
+      "lon": 150.827
+    },
+    {
+      "region": "buryatia",
+      "lat": 52.804,
+      "lon": 108.197
+    },
+    {
+      "region": "buryatia",
+      "lat": 53.03,
+      "lon": 107.94
+    },
+    {
+      "region": "buryatia",
+      "lat": 52.189,
+      "lon": 106.595
+    },
+    {
+      "region": "buryatia",
+      "lat": 51.885,
+      "lon": 108.552
+    },
+    {
+      "region": "buryatia",
+      "lat": 52.342,
+      "lon": 110.448
+    },
+    {
+      "region": "buryatia",
+      "lat": 51.912,
+      "lon": 108.416
+    },
+    {
+      "region": "kyrgyz",
+      "lat": 42.075,
+      "lon": 74.118
+    },
+    {
+      "region": "kyrgyz",
+      "lat": 42.078,
+      "lon": 74.857
+    },
+    {
+      "region": "kyrgyz",
+      "lat": 42.709,
+      "lon": 74.228
+    },
+    {
+      "region": "kyrgyz",
+      "lat": 41.522,
+      "lon": 75.798
+    }
+  ],
+  "office": {
+    "name": "Р.ОС.НЕДРА — офис, Тюмень",
+    "lat": 57.15,
+    "lon": 65.53
+  },
+  "symbolic_connections": [
+    "khmao",
+    "yanao",
+    "zabaikal",
+    "amur",
+    "khabarovsk",
+    "chukotka"
+  ]
+}
