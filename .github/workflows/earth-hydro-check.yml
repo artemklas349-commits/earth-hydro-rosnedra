@@ -1,0 +1,19 @@
+name: Earth Hydro banner checks
+on:
+  push:
+    branches: [main, enhance-controls6]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check Earth Hydro static bundle
+        run: node scripts/check-banner.mjs
