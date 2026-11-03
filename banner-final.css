@@ -32,7 +32,7 @@ body,.site{background:var(--eh-navy)}
 .button-quiet{background:transparent!important;color:#f9fcff!important;border:1px solid #aac1e180!important}
 .button-primary:hover,.button-quiet:hover{transform:translateY(-2px)}
 .button-primary svg,.button-quiet svg{display:none}
-.earth-wrap{z-index:4!important;position:absolute!important;top:calc(54% + 6px)!important;right:clamp(-55px,-2.5vw,-10px)!important;width:min(61vw,870px)!important;height:auto!important;aspect-ratio:1!important;transform:translateY(-50%)!important;opacity:1!important;pointer-events:auto!important}
+.earth-wrap{z-index:4!important;position:absolute!important;top:calc(54% + 6px)!important;right:clamp(-55px,-2.5vw,-10px)!important;width:min(61vw,calc(100svh - 90px),870px)!important;height:auto!important;aspect-ratio:1!important;transform:translateY(-50%)!important;opacity:1!important;pointer-events:auto!important}
 .earth-canvas{display:block;width:100%;height:100%;cursor:grab;touch-action:none;outline:0}
 .earth-canvas:active{cursor:grabbing}
 .earth-note{display:none!important}
@@ -47,7 +47,7 @@ html.eh-embedded .hero::after{inset:0}
 @media(max-width:1190px) and (min-width:751px){
  .hero-copy{padding-left:clamp(30px,7vw,100px)!important;width:55vw}
  .hero h1{font-size:clamp(32px,3.5vw,42px)!important}
- .earth-wrap{width:67vw!important;right:-12vw!important}
+ .earth-wrap{width:min(67vw,calc(100svh - 98px))!important;right:-12vw!important}
  .hero-lead{max-width:450px}
  .header .nav{gap:16px!important}
 }
