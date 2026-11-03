@@ -1,7 +1,7 @@
 name: Earth Hydro banner checks
 on:
   push:
-    branches: [main, enhance-controls6]
+    branches: [main, "enhance-*", "polish-*"]
   pull_request:
     branches: [main]
   workflow_dispatch:
