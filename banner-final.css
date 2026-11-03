@@ -1,0 +1,40 @@
+/* Earth Hydro clean corporate layout vNext */
+html,body,#root{margin:0;min-width:320px;overflow-x:hidden}
+body,.site{background:#071a43}.site{overflow:hidden}
+.site>.intro,.site>.section,.site>.footer{display:none!important}
+.hero{min-height:710px;height:100svh;max-height:1040px;overflow:hidden;isolation:isolate;background:radial-gradient(ellipse at 75% 67%,#1953a0 0%,#0b306b 52%,#06183b 100%)!important;position:relative}
+.hero:before{background-image:radial-gradient(#81b8f4 0.65px,transparent 1.3px)!important;background-size:120px 93px!important;opacity:.35!important;z-index:0!important;pointer-events:none}
+.hero:after{background:linear-gradient(90deg,#03163788,transparent 56%)!important;z-index:1!important;pointer-events:none}
+.header{height:64px!important;background:#f6f7f9!important;padding:0 clamp(18px,3.5vw,65px)!important;z-index:25!important;border-color:#dfe5ee!important}
+.brand{gap:10px!important}.brand-mark{background:linear-gradient(145deg,#20aee6,#07417f);border-radius:50%;color:#fff;border:0}.brand-name{letter-spacing:.02em;font-family:Arial,sans-serif;font-size:16px}.brand-sub{letter-spacing:.07em;font-size:7px}
+.nav{gap:clamp(15px,2vw,34px)!important}.nav a{font:600 13px Arial,sans-serif!important;color:#162036!important}
+.header-phone{background:#1b3d8d;color:white!important;border-radius:30px;padding:10px 16px;font:700 12px Arial,sans-serif}
+.hero-copy{position:relative;z-index:5;width:55%;max-width:780px;padding:clamp(74px,12vh,135px) 0 0 clamp(24px,12vw,180px)!important;pointer-events:none}.hero-copy>*{pointer-events:auto}
+.eyebrow{display:block;color:#a6c9ff!important;text-transform:uppercase;letter-spacing:.16em;font:700 clamp(9px,.75vw,11px)/1.5 Arial,sans-serif;margin:0 0 22px!important}.eyebrow:before{display:none}
+.hero h1{font:700 clamp(36px,3.1vw,56px)/1.15 Arial,sans-serif!important;letter-spacing:-.035em;max-width:590px;margin:0!important;text-wrap:pretty}
+.hero-lead{font:400 clamp(13px,1vw,16px)/1.65 Arial,sans-serif!important;color:#d2e0fb!important;max-width:530px;margin:20px 0 23px!important}
+.hero-proof{position:static!important;left:auto!important;bottom:auto!important;display:flex;gap:16px!important;margin:0 0 27px!important;flex-wrap:wrap}
+.proof-item{min-width:100px;padding-left:11px;border-left:1px solid #97b8ec}.proof-num{font:700 clamp(25px,2.1vw,34px)/1 Arial,sans-serif!important}.proof-caption{font:400 10px/1.4 Arial,sans-serif!important;letter-spacing:0;text-transform:none;color:#c5d4ed;margin-top:6px}
+.hero-actions{display:flex;gap:12px!important;align-items:center;flex-wrap:wrap}
+.button-primary,.button-quiet{border-radius:45px;font:700 12px Arial,sans-serif!important;padding:16px 24px!important;text-decoration:none!important;white-space:nowrap;transition:transform .25s}
+.button-primary{background:white!important;color:#153b87!important;border:0!important}.button-quiet{background:transparent;border:1px solid #b7c9e480!important;color:white!important}.button-primary:hover,.button-quiet:hover{transform:translateY(-2px)}
+.earth-wrap{position:absolute!important;z-index:4!important;width:min(56vw,760px)!important;aspect-ratio:1;right:clamp(8px,3vw,70px)!important;top:calc(51% + 17px)!important;transform:translateY(-50%)!important;opacity:1!important;pointer-events:auto!important}
+.earth-note{display:none!important}
+.eh-water-grid{position:absolute;z-index:2;left:0;right:0;bottom:0;height:30%;pointer-events:none;opacity:.92}.eh-water-grid canvas{width:100%;height:100%;display:block}
+.eh-map-note{position:absolute;z-index:5;right:16px;bottom:9px;max-width:350px;font:9px/1.5 Arial,sans-serif;color:#9bc8ffad;text-align:right;pointer-events:none}
+.eh-geography-tooltip{font-family:Arial,sans-serif!important;box-shadow:0 10px 30px #020e29bb!important;border-color:#64b9ed88!important}
+@media(max-width:1150px) and (min-width:751px){.hero-copy{max-width:58%;padding-left:6vw!important}.hero h1{font-size:clamp(33px,3.5vw,45px)!important}.earth-wrap{right:-9vw!important;width:65vw!important}}
+@media(max-width:750px){
+.hero{height:auto!important;max-height:none!important;min-height:900px!important;display:flex;flex-direction:column}
+.header{height:65px!important;flex:none;padding:0 18px!important}.nav{top:64px!important;z-index:40}.header-phone{display:none!important}
+.hero-copy{order:1;width:auto;max-width:none;padding:31px 21px 0!important;margin:0}
+.eyebrow{font-size:9px!important;margin-bottom:16px!important}
+.hero h1{font-size:clamp(29px,7.5vw,41px)!important;line-height:1.13}
+.hero-lead{font-size:13px!important;line-height:1.58!important;margin:17px 0!important}
+.hero-proof{gap:10px!important;margin-bottom:17px!important}.proof-item{min-width:80px}.proof-num{font-size:23px!important}.proof-caption{font-size:9px!important}
+.hero-actions{gap:10px!important}.button-primary,.button-quiet{padding:13px 16px!important;font-size:11px!important}
+.earth-wrap{order:2;position:relative!important;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;width:min(100vw,590px)!important;max-width:100%;transform:none!important;margin:18px auto 85px!important;flex:none}
+.eh-water-grid{height:20%}.eh-map-note{text-align:center;left:9px;right:9px;font-size:8px}.hero:after{background:linear-gradient(180deg,#05193d33,transparent 72%)!important}
+}
+@media(max-width:390px){.hero{min-height:830px!important}.hero-copy{padding:24px 17px 0!important}.hero h1{font-size:29px!important}.hero-lead{font-size:12px!important}}
+@media(prefers-reduced-motion:reduce){.eh-water-grid{opacity:.55}}
