@@ -19,7 +19,7 @@
     const brand=document.querySelector('.header .brand');
     if(brand && !brand.querySelector('.eh-official-logo')){
       const img=document.createElement('img');
-      img.className='eh-official-logo';img.alt='Р.ОС.НЕДРА';img.src='./rosnedra-logo.svg';
+      img.className='eh-official-logo';img.alt='Р.ОС.НЕДРА';img.onerror=()=>img.remove();img.src='./rosnedra-logo.svg';
       brand.prepend(img);
     }
     eyebrow.textContent='Научно-исследовательская фирма · с 1998 года';
