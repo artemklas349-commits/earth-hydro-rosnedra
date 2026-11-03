@@ -30,5 +30,18 @@ if(match){
  check(points.every(v=>Array.isArray(v)&&v.length===2&&v[0]>=-90&&v[0]<=90&&v[1]>=-180&&v[1]<=180),'Coordinate ranges valid');
  check(points.some(v=>v[1]<-175),'Date line longitude handled');
 }
+check(globe.includes('const routeDuration=6900,routeInterval=9500'),'Flight routes animate sequentially with pause');
+check(globe.includes('float k=clamp(-d/0.22,0.0,1.0)'),'Thin refined atmosphere shader');
+check(globe.includes('new Kn(.0045,10,8)'),'Minimal work points');
+check(globe.includes('if(p.z<(1.48*1.48)/U.position.z+.018)return'),'Hidden hemisphere hover protection');
+check(globe.includes('const dLon=((l-g[2]+540)%360)-180'),'Dateline-aware regional labels');
+check(script.includes('const cols=mobile?52:122,rows=mobile?22:36'),'Optimized perspective water grid');
+check(css.includes('@media(min-width:751px) and (max-height:700px)'),'Short-desktop responsive layout');
+check(html.includes('controls7')&&bundle.includes('controls7'),'v7 code cache bust');
+const deg=Math.PI/180;
+const point=(lat,lon)=>[Math.cos(lat*deg)*Math.cos(lon*deg),Math.sin(lat*deg),-Math.cos(lat*deg)*Math.sin(lon*deg)];
+const circ=(p,q)=>Math.acos(Math.max(-1,Math.min(1,p.reduce((sum,v,i)=>sum+v*q[i],0))));
+check(circ(point(66,179.4),point(66,-179.4))<0.02,'Correct Chukotka distance across 180-degree meridian');
+check(Math.abs(Math.hypot(...point(57.15,65.53))-1)<1e-12,'Tyumen normalized vector on globe');
 console.log(failed?'Quality checks failed: '+failed:'All static quality checks passed');
 process.exitCode=failed?1:0;
