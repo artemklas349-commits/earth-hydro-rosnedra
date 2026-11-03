@@ -40,8 +40,6 @@
     }
     const wave=document.createElement('div');wave.className='eh-water-grid';wave.setAttribute('aria-hidden','true');
     wave.innerHTML='<canvas></canvas>';hero.appendChild(wave);
-    const note=document.createElement('div');note.className='eh-map-note';
-    note.textContent='География работ · названия объектов не раскрываются';hero.appendChild(note);
     startWave(wave);
     return true;
   }
