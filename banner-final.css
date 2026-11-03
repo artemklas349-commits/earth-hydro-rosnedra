@@ -5,7 +5,7 @@
 html,body,#root{margin:0;min-width:320px;width:100%;overflow-x:clip}
 body,.site{background:var(--eh-navy)}
 .site>.intro,.site>.section,.site>.footer{display:none!important}
-.hero{position:relative;isolation:isolate;min-height:630px;height:100svh;max-height:950px;overflow:hidden;color:var(--eh-ink);background:radial-gradient(ellipse at 83% 87%,#164d9a 0%,#0a2d67 45%,#06183d 83%)!important}
+.hero{position:relative;isolation:isolate;min-height:630px;height:100svh;max-height:none;overflow:hidden;color:var(--eh-ink);background:radial-gradient(ellipse at 83% 87%,#164d9a 0%,#0a2d67 45%,#06183d 83%)!important}
 .hero::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.2;background-image:radial-gradient(#91c8ff .7px,transparent 1.25px);background-size:138px 103px}
 .hero::after{content:"";position:absolute;inset:64px 0 0;z-index:1;pointer-events:none;background:linear-gradient(90deg,#041535cc 0%,#04153555 38%,transparent 63%)!important}
 .header{position:relative!important;z-index:30!important;display:flex;align-items:center;justify-content:space-between;flex:none;height:64px!important;padding:0 clamp(16px,3.4vw,52px)!important;background:#f5f7fa!important;border:0!important;color:#111c30!important}
@@ -81,3 +81,35 @@ html.eh-embedded .hero::after{inset:0}
 .earth-wrap{filter:none!important}
 .eh-geography-tooltip{font-size:11px!important;letter-spacing:.01em;max-width:250px}
 @media(min-width:751px){.hero-copy{width:min(51vw,720px)}.hero h1{max-width:510px}}
+
+/* Earth Hydro controls v6 — refined and accessible. */
+.earth-wrap{isolation:isolate}
+.eh-globe-tools{
+  position:absolute;right:5.5%;bottom:10%;z-index:70;
+  display:flex;flex-direction:column;gap:7px;align-items:center;
+  pointer-events:auto;
+}
+.eh-globe-tools button{
+  display:grid;place-items:center;width:35px;height:35px;padding:0;
+  color:#e6f8ff;background:rgba(4,31,73,.70);
+  border:1px solid rgba(131,205,246,.37);border-radius:50%;
+  box-shadow:0 3px 14px rgba(0,15,49,.23);
+  font:500 22px/1 Arial,sans-serif;cursor:pointer;
+  -webkit-tap-highlight-color:transparent;
+  transition:background .18s ease, border-color .18s ease,transform .18s ease;
+}
+.eh-globe-tools button[data-action="reset"]{font-size:23px}
+.eh-globe-tools button[data-action="pause"]{font-size:17px}
+.eh-globe-tools button:hover,.eh-globe-tools button:focus-visible{
+  background:rgba(18,85,148,.93);border-color:rgba(171,231,255,.93);
+  transform:scale(1.06);outline:none;
+}
+.eh-globe-tools button:focus-visible{outline:2px solid #d4f1ff;outline-offset:3px}
+.eh-geography-tooltip{pointer-events:none!important;backdrop-filter:blur(8px)}
+@media(max-width:750px){
+  .eh-globe-tools{right:5%;bottom:16%;gap:6px}
+  .eh-globe-tools button{width:32px;height:32px;font-size:20px;background:rgba(5,35,78,.86)}
+}
+@media(prefers-reduced-motion:reduce){
+  .eh-globe-tools button{transition:none}
+}
