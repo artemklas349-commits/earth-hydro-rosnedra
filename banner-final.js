@@ -44,53 +44,66 @@
     return true;
   }
   function startWave(layer) {
-    const canvas=layer.querySelector('canvas'),ctx=canvas.getContext('2d',{alpha:true});
+    const canvas=layer.querySelector('canvas');
+    const ctx=canvas.getContext('2d',{alpha:true,desynchronized:true});
     if(!ctx)return;
-    const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
-    let width=1,height=1,time=0,raf=0,last=0,visible=true;
-    function resize() {
-      const box=layer.getBoundingClientRect();
-      width=Math.max(1,box.width);height=Math.max(1,box.height);
-      const dpr=Math.min(1.5,window.devicePixelRatio||1);
-      canvas.width=Math.round(width*dpr);canvas.height=Math.round(height*dpr);
-      ctx.setTransform(dpr,0,0,dpr,0,0);draw();
+    const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let w=1,h=1,dpr=1,seconds=0,frameId=0,last=0,visible=true;
+    function resize(){
+      const bounds=layer.getBoundingClientRect();
+      w=Math.max(1,bounds.width);
+      h=Math.max(1,bounds.height);
+      dpr=Math.min(window.devicePixelRatio||1,1.5);
+      const cw=Math.round(w*dpr),ch=Math.round(h*dpr);
+      if(canvas.width!==cw||canvas.height!==ch){canvas.width=cw;canvas.height=ch}
+      ctx.setTransform(dpr,0,0,dpr,0,0);
+      paint();
     }
-    function draw() {
-      ctx.clearRect(0,0,width,height);
-      const mobile=width<760;
-      const cols=mobile?45:122,rows=mobile?24:42;
-      const center=width*.50;
+    function paint(){
+      ctx.clearRect(0,0,w,h);
+      const mobile=w<760;
+      const cols=mobile?52:122,rows=mobile?22:36;
       for(let row=0;row<rows;row++){
-        const depth=row/(rows-1);
-        const spread=width*(.30+depth*1.20);
-        const baseline=height*(.14+Math.pow(depth,1.55)*.88);
-        const fade=Math.pow(depth,.53);
+        const perspective=row/(rows-1);
+        const depth=Math.pow(perspective,1.15);
+        const yBase=h*(.18+.85*depth);
+        const span=w*(.42+1.03*depth);
         for(let col=0;col<cols;col++){
-          const u=col/(cols-1),x=center+(u-.5)*spread;
-          const cycle=u*Math.PI*5.6;
-          const waveA=Math.sin(cycle*.9-time*.50+depth*.65);
-          const waveB=Math.cos(cycle*1.45+time*.32-depth*2.0);
-          const swell=(waveA*.6+waveB*.4);
-          const y=baseline-swell*height*(.10+.085*depth);
-          const softEdge=Math.max(0,Math.min(1,(.5-Math.abs(u-.5))/.09));
-          const alpha=Math.max(0,Math.min(.77,(0.17+fade*.54)*softEdge));
-          const radius=(mobile?.48:.55)+(mobile?.44:.53)*depth;
-          if(y<0||y>height)continue;
-          ctx.beginPath();ctx.arc(x,y,radius,0,Math.PI*2);
-          ctx.fillStyle='rgba(105,204,255,'+alpha.toFixed(3)+')';ctx.fill();
+          const u=col/(cols-1),distance=Math.abs(u-.5)*2;
+          const x=w*.5+(u-.5)*span;
+          if(x<0||x>w)continue;
+          const crest=Math.sin(u*10.8-seconds*.36+depth*1.1)*.64
+             +Math.sin(u*19+seconds*.48-depth*2.8)*.27
+             +Math.cos(u*6.6+seconds*.23)*.09;
+          const y=yBase-h*(.075+.095*depth)*crest;
+          if(y<0||y>h)continue;
+          const edge=Math.max(0,Math.min(1,(1-distance)/.16));
+          const depthAlpha=(.16+.43*Math.pow(depth,.65));
+          const alpha=Math.max(0,Math.min(.67,edge*depthAlpha));
+          const size=(mobile?.43:.52)+depth*(mobile?.32:.47);
+          ctx.beginPath();
+          ctx.arc(x,y,size,0,Math.PI*2);
+          ctx.fillStyle='rgba(104,193,251,'+alpha.toFixed(3)+')';
+          ctx.fill();
         }
       }
     }
-    function animate(now){
-      raf=requestAnimationFrame(animate);
-      if(!visible||document.hidden||now-last<40)return;
-      last=now;time+=.033;draw();
+    function tick(now){
+      frameId=requestAnimationFrame(tick);
+      if(!visible||document.hidden||now-last<48)return;
+      const dt=last?Math.min(.07,(now-last)/1000):.048;
+      last=now;
+      seconds+=dt;
+      paint();
     }
     if('ResizeObserver' in window)new ResizeObserver(resize).observe(layer);
     else window.addEventListener('resize',resize);
-    if('IntersectionObserver' in window)new IntersectionObserver(e=>{visible=e[0].isIntersecting}).observe(layer);
-    resize();if(!reduced)raf=requestAnimationFrame(animate);
-    window.addEventListener('pagehide',()=>cancelAnimationFrame(raf),{once:true});
+    if('IntersectionObserver' in window){
+      new IntersectionObserver(entries=>{visible=entries[0].isIntersecting},{threshold:0}).observe(layer);
+    }
+    resize();
+    if(!reduceMotion)frameId=requestAnimationFrame(tick);
+    window.addEventListener('pagehide',()=>cancelAnimationFrame(frameId),{once:true});
   }
   if (!setupHero()){
     const observer=new MutationObserver(()=>{if(setupHero())observer.disconnect()});
